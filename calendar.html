@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+        <title>Interactive Calendar</title>
+        <link rel="stylesheet" href="mystyle.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="part_1">
+
+                <div class="month-year">
+                    <div class="month-wrapper">
+                            <select class="month-box" id="monthSelect"></select>
+                    </div>
+                    <select class="year-box" id="yearSelect"></select>
+                </div>
+
+                <div class="month-btn">
+                    <button class="left-arrow" id="left-btn"><</button>
+                    <button class="right-arrow" id="right-btn">></button>
+                </div>
+
+            </div>
+
+            <div class="days weekdays">
+                <div>MON</div>
+                <div>TUE</div>
+                <div>WED</div>
+                <div>THU</div>
+                <div>FRI</div>
+                <div>SAT</div>
+                <div>SUN</div>
+            </div>
+
+            <div class="calendar-header" id="month-year-head"></div>
+            <div class="days days-grid" id="days-grid"></div>
+
+        </div>
+
+        <script src="myscript.js"></script>
+
+    </body>
+</html>

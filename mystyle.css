@@ -1,0 +1,148 @@
+body {
+    font-family: "Roboto Mono", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f3f4f6;
+    margin: 0;
+}
+
+.part_1 {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.container {
+    background: white;
+    width: 406px;
+    border-radius: 8px;
+    padding: 10px;
+    border: 1px solid #e5e7eb;
+}
+
+.month-wrapper {
+    display: inline-grid;
+    grid-template-areas: "select";
+    align-items: center;
+    position: relative;
+    font-size: 24px;
+    font-family: "Roboto Mono", monospace; 
+}
+
+.month-wrapper::after {
+    content: attr(data-value); 
+    grid-area: select;
+    visibility: hidden; 
+    white-space: nowrap;
+    padding-right: 0px;
+}
+
+.month-box {
+    grid-area: select;
+    width: 100%;
+    min-width: 100%;
+    /* Kế thừa font từ thẻ cha */
+    font-size: inherit; 
+    font-family: inherit; 
+    
+    color: rgba(0, 0, 0, 0.6);
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    appearance: none; /* Bạn đang dùng cái này để ẩn mũi tên mặc định */
+}
+
+.month-box {
+    width: 10px;
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.6);
+    background-color: transparent;
+    border: none;
+    font-family: "Roboto Mono";
+    color: inherit;
+    cursor: pointer;
+    outline: none;
+    appearance: none;
+}
+
+.year-box {
+    width: 100%;
+    max-width: max-content;
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.6);
+    background-color: transparent;
+    border: none;
+    font-family: "Roboto Mono";
+    color: inherit;
+    cursor: pointer;
+    outline: none;
+}
+
+.left-arrow {
+    margin-left: 0px;
+    font-size: 20px;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+}
+
+.right-arrow {
+    font-size: 20px;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+}
+
+.month-btn {
+    margin-top: 6px;
+}
+
+.weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    gap: 5px;
+}
+
+.days-grid {
+    row-gap: 15px;
+}
+
+.day {
+    color: #1c3d5a;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    margin: auto;
+    border-radius: 50%;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.day.has-date:hover {
+    background-color: #e2e8f0;
+    cursor: pointer;
+}
+
+.day.today {
+    background-color: #3182ce;
+    color: white;
+    font-weight: bold;
+}
+
+.day.today:hover {
+    background-color: #2b6cb0;
+}
